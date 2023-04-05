@@ -1,0 +1,85 @@
+{%extends 'head.html'%}
+{%block content%}
+<style>
+   .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+   }
+
+   .primary {
+      background-color: #ba970a;
+      color: white;
+   }
+
+   .secondary {
+      background-color: #0d6bc8;
+      color: #4CAF50;
+   }
+</style>
+<div class="about">
+  <div class="container_width">
+     <div class="row d_flex grig">
+        <div class="col-md-6">
+           <div class="about_img">
+              <figure><img src="/static/images/blog1.jpg" alt="#"/>
+              </figure>
+           </div>
+        </div>
+        <div class="col-md-6 order">
+           <div class="titlepage text_align_left">
+              <h3>{{post.author.name}}</h3>
+              p><img width="200px" height="200px" style="border-radius: 50%;" class="posts__img" src="{{ url_for('static', filename='uploads/' + post.filename) }}" alt="img"></p>
+               <p>{{ post.description }}</p>
+               <p>{{ post.date }}</p>
+               <button class="button primary">
+                  <a class="read_more" href="http://127.0.0.1:5000/{{ post.id }}/delete/">Delete</a>
+               </button>
+               <button class="button secondary">
+                  <a class="read_more" href="http://127.0.0.1:5000/{{ post.id }}/update/">Update</a>
+               </button>
+                    </div>
+                 </div>
+                 <div class="col-lg-6 col-md-12">
+                    <div class="hedingh3 text_align_left">
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<!-- end about -->
+<!--  footer -->
+<footer>
+  <div class="footer">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-7">
+              <div class="row">
+                 <div class="col-lg-6 col-md-12">
+                    <div class="hedingh3 text_align_left">
+                      
+                    </div>
+                 </div>
+              </div>
+           </div>
+        
+           <script>
+              const likeBtn = document.querySelector('.like-btn');
+        
+              likeBtn.addEventListener('click', () => {
+                 likeBtn.classList.toggle('clicked');
+              });
+           </script>
+<!-- end footer -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+{%endblock%}

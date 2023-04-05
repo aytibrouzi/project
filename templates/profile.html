@@ -1,0 +1,24 @@
+{%extends 'head.html'%}
+{% block content %}
+<div class="profile">
+   <h1>Profie</h1>
+   <ul>
+     <li>Email: {{user.email}}</li>
+     <li>name: {{user.name}}</li>
+   </ul>
+   {% for post in posts %}
+   <div class=" col-md-4">
+      <div class="latest">
+         <img width="200px" height="200px" style="border-radius: 50%;" class="posts__img" src="{{ url_for('static', filename='uploads/' + post.filename) }}" alt="img">
+         <span>{{post.date}}</span>
+         <div class="nostrud">
+            <h3 style="color:aliceblue"><a href='http://127.0.0.1:5000/{{post.id}}'>{{post.title}}</a></h3>
+            <p style="color:aliceblue">{{ post.description }}</p>
+            <pstyle="color:aliceblue"><a href="http://127.0.0.1:5000/profile/{{post.author_id}}">{{ post.author.name }}</a></p>
+            <a class="read_more" href="http://127.0.0.1:5000/{{post.id}}">Read More</a>
+         </div>
+      </div>
+   </div>
+   {%endfor%}
+</div>
+{% endblock %}

@@ -1,0 +1,166 @@
+body {
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://oir.mobi/uploads/posts/2019-12/1575491508_dzhungli-sverhu-2.jpg);
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://img.freepik.com/premium-vector/horizontal-scene-at-night-with-long-road-through-snow-park-into-the-town_1639-22818.jpg);
+  background-position: center;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__search {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.header__search input[type="text"] {
+  width: 50%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.header__search button[type="submit"] {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.header__menu {
+  position: relative;
+  text-align: center;
+  font-family: Impact, Fantasy, sans-serif;
+}
+
+.header__menu-toggle {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.header__menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  min-width: 100px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+  .header__menu-dropdown a {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  }
+
+  .header__menu-dropdown a:hover {
+  color: #04dd00;
+  }
+
+  .header__menu:hover .header__menu-dropdown {
+  display: block;
+  animation: rainbow 3s linear infinite;
+  border-radius: 50px 0px 50px 50px;
+  }
+
+  @keyframes rainbow {
+		0% {
+			background-color: #18bd1500;
+		}
+    15% {
+      background-color: #00bfff8f;
+    }
+		30% {
+			background-color: #106207; 
+		}
+    60% {
+      background-color: #00bfff8f;
+    }
+		100% {
+			background-color: #ff000000; 
+		}
+	}
+
+  .slideshow-container {
+    position: relative;
+    background: #b6a27f;
+    border-radius: 50px 50px 0 0;
+  }
+  
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #414141;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgb(146, 83, 27);
+    color: white;
+  }
+  
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #e6c68f;
+    border-radius: 0 0 50px 50px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(146, 83, 27);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #0a9912;
+  }
+  
+  q {font-style: italic;}
+  
+  .author {color: rgb(0, 56, 0);}
